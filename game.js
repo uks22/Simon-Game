@@ -29,21 +29,10 @@ $(".btn").click(function(event){
     clk++;
 });
 
-if($(document).width()<520)
-    {
-        $("h1").click(function(){
-            $("h1").off();
-            nextSequence();
-        });
-        $("h1").text("Tap Here To Start The Game")
-    }
-    else
-    {
-        $(document).keypress(function(){
-            $(document).off();
-            nextSequence();
-        });
-    }   
+$(document).keypress(function(){
+    $(document).off();
+    nextSequence();
+}); 
 
 function startover()
 {
@@ -87,21 +76,12 @@ function checkAnswer(currentLevel)
         setTimeout(function(){
             $("body").removeClass("game-over");
         },100);
-        if($(document).width()<520)
-        {
-            $("h1").click(function(){
-                $("h1").off();
-                nextSequence();
-            });
-            $("h1").text("Tap Here To Start The Game")
-        }
-        else
-        {
-            $(document).keypress(function(){
-                $(document).off();
-                nextSequence();
-            });
-        }   
+        
+        $(document).keypress(function(){
+            $(document).off();
+            nextSequence();
+        });
+        
         startover();
     }
 
