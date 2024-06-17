@@ -30,7 +30,7 @@ body {
     grid-template:250px 250px/250px 250px;
   }
 }
-.outbok {
+.outbox {
   display: flex;
   width: 50%;
   margin: auto;
